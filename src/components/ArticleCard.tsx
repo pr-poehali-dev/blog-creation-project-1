@@ -10,9 +10,10 @@ interface ArticleCardProps {
   date: string;
   image: string;
   readTime: string;
+  tags?: string[];
 }
 
-const ArticleCard = ({ title, excerpt, category, date, image, readTime }: ArticleCardProps) => {
+const ArticleCard = ({ title, excerpt, category, date, image, readTime, tags = [] }: ArticleCardProps) => {
   const shareArticle = (platform: string) => {
     const url = window.location.href;
     const text = title;
@@ -48,6 +49,16 @@ const ArticleCard = ({ title, excerpt, category, date, image, readTime }: Articl
           {title}
         </h3>
         <p className="text-gray-600 line-clamp-3">{excerpt}</p>
+        
+        {tags.length > 0 && (
+          <div className="flex flex-wrap gap-2">
+            {tags.map((tag, index) => (
+              <Badge key={index} variant="outline" className="text-xs">
+                {tag}
+              </Badge>
+            ))}
+          </div>
+        )}
         
         <div className="flex items-center gap-4 text-sm text-gray-500">
           <span className="flex items-center gap-1">

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
+import SearchBar from './SearchBar';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,14 +35,18 @@ const Header = () => {
             ))}
           </nav>
 
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            <Icon name={isMenuOpen ? 'X' : 'Menu'} size={24} />
-          </Button>
+          <div className="flex items-center gap-4">
+            <SearchBar />
+            
+            <Button
+              variant="ghost"
+              size="icon"
+              className="md:hidden"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              <Icon name={isMenuOpen ? 'X' : 'Menu'} size={24} />
+            </Button>
+          </div>
         </div>
 
         {isMenuOpen && (

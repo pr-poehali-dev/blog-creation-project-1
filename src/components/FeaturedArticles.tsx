@@ -8,7 +8,8 @@ const FeaturedArticles = () => {
       category: 'Дизайн',
       date: '15 окт 2024',
       image: 'https://cdn.poehali.dev/projects/2a3c0a83-1b1b-44f1-808c-9d4ea446b6d8/files/6d3eb642-688e-434e-8158-1f7b5b719c8e.jpg',
-      readTime: '5 мин'
+      readTime: '5 мин',
+      tags: ['UI/UX', 'Тренды', 'Веб-дизайн', 'Градиенты']
     },
     {
       title: 'React и TypeScript: лучшие практики',
@@ -16,7 +17,8 @@ const FeaturedArticles = () => {
       category: 'Разработка',
       date: '12 окт 2024',
       image: 'https://cdn.poehali.dev/projects/2a3c0a83-1b1b-44f1-808c-9d4ea446b6d8/files/ef4b10a3-a8d8-4fdb-922a-f1cedad10919.jpg',
-      readTime: '8 мин'
+      readTime: '8 мин',
+      tags: ['React', 'TypeScript', 'Frontend', 'Best Practices']
     },
     {
       title: 'Путь к продуктивности: мой опыт',
@@ -24,7 +26,8 @@ const FeaturedArticles = () => {
       category: 'Продуктивность',
       date: '8 окт 2024',
       image: 'https://cdn.poehali.dev/projects/2a3c0a83-1b1b-44f1-808c-9d4ea446b6d8/files/459577ae-ffe6-4f76-9396-7dbeb7d25196.jpg',
-      readTime: '6 мин'
+      readTime: '6 мин',
+      tags: ['Продуктивность', 'Инструменты', 'Лайфхаки', 'Тайм-менеджмент']
     }
   ];
 
